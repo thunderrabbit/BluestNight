@@ -35,3 +35,7 @@
 .nav-arrow {
   float: right;
 }
+
+#post-nav div {
+  margin: 0 1rem;
+}
