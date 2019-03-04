@@ -19,7 +19,7 @@
     <link rel="canonical" href="{{ .URL | absURL }}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="prefetch stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     {{ if $.Site.Params.hashover }}<link rel="prefetch stylesheet" type="text/css" href="{{ "hashover/comments.css" | absLangURL }}">{{ end }}
-    <link rel="prefetch stylesheet" type="text/css" href="{{ "styles.css" | absLangURL }}">
+    <link rel="prefetch stylesheet" type="text/css" href="{{ "styles.css" | relLangURL }}">
     {{ if (and (isset $.Site.Params.piwik "host") ($.Site.Params.piwik.enable)) -}}
     <script type="text/javascript">
       var _paq = _paq || [];
@@ -131,7 +131,7 @@
     </div>
     {{- if $.Site.Params.widgets.search -}}
     <script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src="{{ "js/search.js" | absLangURL }}" type="text/javascript"></script>
+    <script src="{{ "js/search.js" | relLangURL }}" type="text/javascript"></script>
     <script>
       var lunrIndex = undefined;
       loadIndex("{{ "index.json" | absURL }}").then(
