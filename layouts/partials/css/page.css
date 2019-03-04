@@ -80,6 +80,11 @@ header a:link, header a:visited, #site-header header a:hover, #site-header heade
   padding-bottom: 0.5rem;
 }
 
+#site-title-img {
+  max-width: 64rem;
+  width:100%
+}
+
 #site-tagline {
   font-size: 1.2rem;
   padding-top: 0.5rem;
